@@ -2,11 +2,11 @@ from brownie import (
     network,
     config,
     accounts,
-    MockV3Aggregator,
-    Contract,
-    VRFCoordinatorMock,
-    LinkToken,
-    interface,
+    #    MockV3Aggregator,
+    #    Contract,
+    #    VRFCoordinatorMock,
+    #    LinkToken,
+    #    interface,
 )
 
 FORKED_LOCAL_ENVIRONMENTS = ["mainnet-fork", "mainnet-fork-dev"]
@@ -30,12 +30,11 @@ def get_account(index=None, id=None):
     return accounts.add(config["wallets"]["from_key"])
 
 
-contract_to_mock = {
+""" contract_to_mock = {
     "eth_usd_price_feed": MockV3Aggregator,
     "vrf_coordinator": VRFCoordinatorMock,
     "link_token": LinkToken,
 }
-
 
 def get_contract(contract_name):
     # will grab contract address from brownie config if defined or deploy mock contract
@@ -80,3 +79,4 @@ def fund_with_link(
     tx.wait(1)
     print("Fund contract")
     return tx
+ """
